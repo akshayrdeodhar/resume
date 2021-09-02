@@ -1,0 +1,187 @@
+%-------------------------
+% Resume in Latex
+% Author : Sourabh Bajaj
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumetiItem}[1]{
+  \item\small{
+    {#1 \vspace{-4pt}}
+  }
+}
+
+% Just in case someone needs a heading that does not need to be in a list
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{https://github.com/akshayrdeodhar}{\Large Akshay Deodhar}} & Email : \href{mailto:adeodhar9@gatech.edu}{adeodhar9@gatech.edu}\\
+  \href{https://github.com/akshayrdeodhar}{github.com/akshayrdeodhar} & Mobile : +91 7057018422 \\
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Georgia Institute of Technology}{Atlanta, GA}
+      {Master of Science in Computer Science; Specialization: Computing Systems}{Aug. 2021 -- June 2023}
+    \resumeSubheading
+      {College of Engineering Pune}{Pune, India}
+      {Honours Bachelor of Technology in Computer Engineering;  GPA: 3.82 (9.56/10.0)}{Jul. 2017 -- June. 2021}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading {Veritas Technologies}{Pune, India}
+      {Software Engineer Intern}{Jan 2021 - July 2021}
+      \resumeItemListStart
+   	        \resumeItem{Enhanced Veritas Infoscale's Container Storage Interface (CSI) plugin to support volume provisioning for large \textbf{Kubernetes} clusters that span \textbf{multiple Infoscale storage clusters}. Initially, the plugin was limited to a single storage cluster and 64 nodes.}
+            \resumeItem{ Supported a \textbf{federation} of storage clusters in Kubernetes by creating \textbf{Custom
+  Resources} for storing federation and volume metadata, and writing a \textbf{controller} for dynamic federation membership management.}
+            \resumeItem{Designed a secure communication mechanism for communication between the CSI plugin and Infoscale REST APIs using a custom CA, Secrets, and ConfigMaps.}
+		\resumeItemListEnd
+        
+      
+% --------Multiple Positions Heading------------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+
+    \resumeSubheading
+      {IIT Kanpur}{Kanpur, India}
+      {Research Intern}{Dec 2019 -- Aug 2020}
+      \resumeItemListStart
+		\resumeItem{Worked on automatic format selection for Sparse Matrix-Vector Multiplication(SpMV) for GPUs, with a focus on \textbf{portability} and \textbf{training cost}, leading to a \textbf{publication} at \textbf{ICPP 2021}.}
+		\resumeItem{Developed a semi-supervised format predictor that minimizes the number of matrices that have to be benchmarked for labeling during training. Achieved \textbf{83\%} accuracy with labels for just \textbf{10\%} of the dataset}
+        \resumeItem{Designed and implemented algorithms for creating matrix samples that preserved the optimal SpMV storage format based on analysis of the \textbf{Nvidia CUDA CUSP SpMV kernels}, improving sampling accuracy by \textbf{30\%}.}
+        \resumeItem{ Built an object-oriented framework in Python for rapid development and evaluation of SpMV format predictors.}
+	\resumeItemListEnd
+
+    \resumeSubheading{COEP Satellite Initiative}{Pune, India}
+      {Subsystem Lead and Individual Contributor}{Nov 2017 -- June 2021}
+      \resumeItemListStart
+         \resumeItem{\textbf{Led} and \textbf{mentored} a \textbf{multidisciplinary} team of \textbf{8} engineering students in designing an Attitude Determination and Control Subsystem (ADCS) for a \textbf{solar sailing satellite} project funded by \textbf{ISRO}}
+		\resumeItem{ Developed and validated an orbit simulation for the solar sailing satellite using \textbf{NASA's General Mission Analysis Tool (GMAT)} and its Python API.}
+        \resumeItem{Added modules for calculating optimal solar sail orientations for orbit raising and for modeling non-ideal actuator behavior to a C-based satellite attitude dynamics simulation.}
+      \resumeItemListEnd
+      
+  \resumeSubHeadingListEnd
+  
+\section{Publications}
+    \resumeItemListStart
+        \resumeItem{Sunidhi Dhandhania, \textbf{Akshay Deodhar}, \textit{et. al.} ``Explaining the Performance of Supervised and Semi-Supervised Methods for Automated Sparse Matrix Format Selection''. \textit{International Workshop on Deployment and Usage of Accelerators, ICPP}, 2021.}
+        \resumeItem{\textbf{Akshay Deodhar}, Aditya Neralkar, \textit{et. al.}  ``Analysis of Solar Sailing as a Means of Orbit Maneuvering for Nanosatellites in Low Earth Orbit''. \textit{International Astronautical Congress}, 2019.}
+    \resumeItemListEnd
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeItemListStart
+    \resumetiItem{\textbf{xv6 kernel threads}: Added \textbf{clone}, \textbf{join}, \textbf{park} and \textbf{unpark} system calls to the xv6 \textbf{kernel}}
+    \resumetiItem{\textbf{Job Control Shell}: A Unix shell that supports multiple pipes, redirection, and job control. \emph{C}}
+    \resumetiItem{\textbf{RankRecommend}: A Flask web app that scrapes github to build a follow graph and generates follow recommendations for a user using a modified version of \textbf{PageRank}. \emph{Python}}
+  \resumeItemListEnd
+
+%--------PROGRAMMING SKILLS------------
+\section{Skills}
+  \resumeItemListStart
+    \resumetiItem{\textbf{Languages}: {C, Python, Go (Golang), C++, CUDA, Scheme, SQL, Bash, x86}}
+    \resumetiItem{\textbf{Technologies}: {Kubernetes, Linux, Gdb, Git, Valgrind, cuSPARSE, scikit-learn, Scipy, openSSL, docker, Django, Flask, Lex, Yacc, VxFS, VxVM}}
+\resumeItemListEnd
+
+
+
+%-------------------------------------------
+\end{document}
