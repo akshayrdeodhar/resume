@@ -54,6 +54,12 @@
   }
 }
 
+\newcommand{\resumeProjItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
 \newcommand{\resumetiItem}[1]{
   \item\small{
     {#1 \vspace{-4pt}}
@@ -65,7 +71,7 @@
     \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
+    \end{tabular*}\vspace{-55pt}
 }
 
 \newcommand{\resumeSubheading}[4]{
@@ -82,7 +88,7 @@
     \end{tabular*}\vspace{-5pt}
 }
 
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+\newcommand{\resumeSubItem}[2]{\resumeProjItem{#1}{#2}\vspace{-4pt}}
 
 \renewcommand{\labelitemii}{$\circ$}
 
@@ -100,9 +106,10 @@
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
   \textbf{\href{https://github.com/akshayrdeodhar}{\Large Akshay Deodhar}} & Email : \href{mailto:adeodhar9@gatech.edu}{adeodhar9@gatech.edu}\\
-  \href{https://github.com/akshayrdeodhar}{github.com/akshayrdeodhar} & Mobile : +91 7057018422 \\
+  \href{https://www.github.com/akshayrdeodhar}{github.com/akshayrdeodhar}, \href{https://akshayrdeodhar.github.io}{akshayrdeodhar.github.io} & Mobile : +1 (470) 659-7798 \\
 \end{tabular*}
 
+\vspace{-10pt}
 
 %-----------EDUCATION-----------------
 \section{Education}
@@ -110,11 +117,14 @@
     \resumeSubheading
       {Georgia Institute of Technology}{Atlanta, GA}
       {Master of Science in Computer Science; Specialization: Computing Systems}{Aug. 2021 -- June 2023}
+      \vspace{-5pt}
     \resumeSubheading
       {College of Engineering Pune}{Pune, India}
       {Honours Bachelor of Technology in Computer Engineering;  GPA: 3.82 (9.56/10.0)}{Jul. 2017 -- June. 2021}
+      \vspace{-7pt}
   \resumeSubHeadingListEnd
 
+\vspace{-7pt}
 
 %-----------EXPERIENCE-----------------
 \section{Experience}
@@ -123,10 +133,14 @@
     \resumeSubheading {Veritas Technologies}{Pune, India}
       {Software Engineer Intern}{Jan 2021 - July 2021}
       \resumeItemListStart
-   	        \resumeItem{Enhanced Veritas Infoscale's Container Storage Interface (CSI) plugin to support volume provisioning for large \textbf{Kubernetes} clusters that span \textbf{multiple Infoscale storage clusters}. Initially, the plugin was limited to a single storage cluster and 64 nodes.}
-            \resumeItem{ Supported a \textbf{federation} of storage clusters in Kubernetes by creating \textbf{Custom
-  Resources} for storing federation and volume metadata, and writing a \textbf{controller} for dynamic federation membership management.}
-            \resumeItem{Designed a secure communication mechanism for communication between the CSI plugin and Infoscale REST APIs using a custom CA, Secrets, and ConfigMaps.}
+            \resumeItem{Veritas Infoscale is a high-performance enterprise storage management solution built on top of Veritas's Cluster File System (CFS) and Volume Manager (CVM).}
+   	        \resumeItem{Enhanced Infoscale's Container Storage Interface (CSI) plugin, to support \textbf{volume provisioning} for pods in large \textbf{Kubernetes}
+   	           clusters spanning multiple Infoscale storage clusters. Original plugin supports single storage cluster.}
+   	           \vspace{-11pt}
+            \resumeItem{Supported a federation of storage clusters in Kubernetes by creating Custom Resources for storing federation and volume metadata, and writing a controller (operator) for dynamic federation membership management.}
+            
+            \resumeItem{Worked with a wide range of languages and tools including Golang, Python, operator-sdk, Custom Resources, Secrets, K8s API clients and REST APIs.}
+		
 		\resumeItemListEnd
         
       
@@ -144,42 +158,58 @@
       {IIT Kanpur}{Kanpur, India}
       {Research Intern}{Dec 2019 -- Aug 2020}
       \resumeItemListStart
-		\resumeItem{Worked on automatic format selection for Sparse Matrix-Vector Multiplication(SpMV) for GPUs, with a focus on \textbf{portability} and \textbf{training cost}, leading to a \textbf{publication} at \textbf{ICPP 2021}.}
-		\resumeItem{Developed a semi-supervised format predictor that minimizes the number of matrices that have to be benchmarked for labeling during training. Achieved \textbf{83\%} accuracy with labels for just \textbf{10\%} of the dataset}
-        \resumeItem{Designed and implemented algorithms for creating matrix samples that preserved the optimal SpMV storage format based on analysis of the \textbf{Nvidia CUDA CUSP SpMV kernels}, improving sampling accuracy by \textbf{30\%}.}
-        \resumeItem{ Built an object-oriented framework in Python for rapid development and evaluation of SpMV format predictors.}
+      \resumeItem{Sparse Matrix-Vector Multiplication (SpMV) is a linear algebra kernel
+		whose performance varies significantly with the sparse matrix storage format
+		and processor architecture.}
+		\resumeItem{Worked on \textbf{automatic format selection for SpMV on GPUs}, with a focus on
+		portability and training cost, leading to a publication in
+		the DUAC workshop  at ICPP 2021.}
+		\resumeItem{Developed a semi-supervised format predictor that achieves \textbf{83\%} accuracy 
+		while requiring format labeling for just \textbf{10\%} of the training set matrices. Reduced training time by ~\textbf{80\%}}.
+        \resumeItem{Designed and implemented sampling algorithms for predicting the optimal sparse matrix
+		format by analyzing the Nvidia CUDA CUSP SpMV kernels,
+        improving accuracy by \textbf{30\%}.}
 	\resumeItemListEnd
 
-    \resumeSubheading{COEP Satellite Initiative}{Pune, India}
+    \resumeSubheading{ISRO COEP Satellite Initiative}{Pune, India}
       {Subsystem Lead and Individual Contributor}{Nov 2017 -- June 2021}
       \resumeItemListStart
-         \resumeItem{\textbf{Led} and \textbf{mentored} a \textbf{multidisciplinary} team of \textbf{8} engineering students in designing an Attitude Determination and Control Subsystem (ADCS) for a \textbf{solar sailing satellite} project funded by \textbf{ISRO}}
-		\resumeItem{ Developed and validated an orbit simulation for the solar sailing satellite using \textbf{NASA's General Mission Analysis Tool (GMAT)} and its Python API.}
-        \resumeItem{Added modules for calculating optimal solar sail orientations for orbit raising and for modeling non-ideal actuator behavior to a C-based satellite attitude dynamics simulation.}
+         \resumeItem{Led and mentored a \textbf{multidisciplinary} team of \textbf{8} engineering students in designing an Attitude Determination and Control Subsystem (ADCS) for a \textbf{solar sailing satellite}.}
+		\resumeItem{ Developed and validated an \textbf{orbit simulation} for the satellite using NASA's General Mission Analysis Tool (GMAT) and its Python API.}
+        \resumeItem{Added modules for calculating optimal solar sail orientations for orbit raising and for modeling non-ideal actuator behavior to a C-based Runge-Kutta 4 numerical satellite attitude dynamics simulation.}
       \resumeItemListEnd
       
   \resumeSubHeadingListEnd
   
+\vspace{-7pt}
+  
 \section{Publications}
-    \resumeItemListStart
-        \resumeItem{Sunidhi Dhandhania, \textbf{Akshay Deodhar}, \textit{et. al.} ``Explaining the Performance of Supervised and Semi-Supervised Methods for Automated Sparse Matrix Format Selection''. \textit{International Workshop on Deployment and Usage of Accelerators, ICPP}, 2021.}
-        \resumeItem{\textbf{Akshay Deodhar}, Aditya Neralkar, \textit{et. al.}  ``Analysis of Solar Sailing as a Means of Orbit Maneuvering for Nanosatellites in Low Earth Orbit''. \textit{International Astronautical Congress}, 2019.}
-    \resumeItemListEnd
+    \resumeSubHeadingListStart
+        \resumeItem{}{Sunidhi Dhandhania, \textbf{Akshay Deodhar}, \textit{et. al.} ``Explaining the Performance of Supervised and Semi-Supervised Methods for Automated Sparse Matrix Format Selection''. \textit{International Workshop on Deployment and Usage of Accelerators, ICPP} 2021, Chicago, USA}
+        \vspace{-5pt}
+        \resumeItem{}{\textbf{Akshay Deodhar}, Aditya Neralkar, \textit{et. al.}  ``Analysis of Solar Sailing as a Means of Orbit Maneuvering for Nanosatellites in Low Earth Orbit''. \textit{International Astronautical Congress}, 2019, Washington DC, USA}
+        
+        \resumeItemListEnd
+
+\vspace{-7pt}
 
 %-----------PROJECTS-----------------
 \section{Projects}
-  \resumeItemListStart
-    \resumetiItem{\textbf{xv6 kernel threads}: Added \textbf{clone}, \textbf{join}, \textbf{park} and \textbf{unpark} system calls to the xv6 \textbf{kernel}}
-    \resumetiItem{\textbf{Job Control Shell}: A Unix shell that supports multiple pipes, redirection, and job control. \emph{C}}
-    \resumetiItem{\textbf{RankRecommend}: A Flask web app that scrapes github to build a follow graph and generates follow recommendations for a user using a modified version of \textbf{PageRank}. \emph{Python}}
-  \resumeItemListEnd
+  \resumeSubHeadingListStart
+    \resumeSubItem{xv6 threads}{Added clone, join, park and unpark syscalls to the \textbf{xv6 kernel} to support threading and semaphores.}
+    \resumeSubItem{CaSH}{Unix shell that supports multiple pipes, redirection and job control. Extensive use of system calls and signals.}
+    \resumeSubItem{RankRecommend}{GitHub follow recommendations using a modified version of PageRank on the follow graph.}
+    \resumeSubItem{Trillian}{Command-line chess game that with a minmax AI and $\alpha$-$\beta$ pruning. Uses a legal move cache for efficiency.}
+    \resumeSubItem{bookFlow}{Django app to connect students across years and eliminate middlemen from the used textbooks market.}
+\resumeSubHeadingListEnd
 
+\vspace{-7pt}
 %--------PROGRAMMING SKILLS------------
 \section{Skills}
-  \resumeItemListStart
-    \resumetiItem{\textbf{Languages}: {C, Python, Go (Golang), C++, CUDA, Scheme, SQL, Bash, x86}}
-    \resumetiItem{\textbf{Technologies}: {Kubernetes, Linux, Gdb, Git, Valgrind, cuSPARSE, scikit-learn, Scipy, openSSL, docker, Django, Flask, Lex, Yacc, VxFS, VxVM}}
-\resumeItemListEnd
+  \resumeSubHeadingListStart
+    \resumeSubItem{Languages}{C, Python, Go (Golang), C++, CUDA, Scheme, Bash}
+    \resumeSubItem{Technologies}{Kubernetes, Linux, Gdb, Git, Valgrind, scikit-learn, Scipy, openSSL, Docker, Django, Flask, gRPC}
+    \resumeSubHeadingListEnd
 
 
 
